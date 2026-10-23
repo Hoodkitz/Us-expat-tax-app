@@ -5,11 +5,13 @@ const footerLinks = {
     { href: '#features', label: 'Features' },
     { href: '#pricing', label: 'Preise' },
     { href: '#faq', label: 'FAQ' },
+    { href: '/rechner', label: 'Gratis-Rechner' },
   ],
   rechtliches: [
     { href: '/impressum', label: 'Impressum' },
     { href: '/datenschutz', label: 'Datenschutz' },
     { href: '/agb', label: 'AGB' },
+    { href: '/widerruf', label: 'Widerruf' },
   ],
   support: [
     { href: 'mailto:support@usexpat.tax', label: 'E-Mail Support' },
@@ -91,13 +93,18 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p className="mt-10 text-xs text-gray-400">
+          Keine Steuerberatung. Kein Mandats- oder Beratungsverhältnis. Alle
+          Inhalte dienen nur der allgemeinen Information.
+        </p>
+
+        <div className="border-t border-gray-800 mt-6 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-gray-400">
             © {new Date().getFullYear()} US Expat Tax App. Alle Rechte vorbehalten.
           </p>
           <div className="flex items-center gap-4">
             <span className="text-xs text-gray-500">
-              Made with ❤️ for US Expats
+              
             </span>
           </div>
         </div>
