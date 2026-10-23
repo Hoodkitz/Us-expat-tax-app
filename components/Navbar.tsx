@@ -7,6 +7,7 @@ const navLinks = [
   { href: '#features', label: 'Features' },
   { href: '#pricing', label: 'Preise' },
   { href: '#faq', label: 'FAQ' },
+  { href: '/rechner', label: 'Gratis-Rechner' },
 ];
 
 export default function Navbar() {

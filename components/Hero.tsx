@@ -15,23 +15,23 @@ export default function Hero() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-primary-100 px-4 py-1.5 text-sm font-medium text-primary-700 mb-6">
             <span className="flex h-2 w-2 rounded-full bg-primary-500" />
-            Jetzt für 2026 verfügbar
+            Gratis-Rechner verfügbar
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-gray-900 mb-6">
             US-Steuererklärung für Expats —{' '}
-            <span className="text-primary-600">einfach & sicher</span>
+            <span className="text-primary-600">verständlich erklärt</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-gray-600 mb-10 max-w-2xl mx-auto">
-            FBAR, FEIE, Form 1040-NR und mehr. Alles in einer App. Kein
-            Steuerberater nötig, keine komplizierten Formulare. Starte jetzt
-            und spare Zeit und Nerven.
+            Rechner, Berichte und Checklisten zu FBAR, FEIE und Fristen.
+            Zur Orientierung, bevor du mit einer Fachperson sprichst. Keine
+            Steuerberatung.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="#pricing" className="btn-primary w-full sm:w-auto">
-              Jetzt kostenlos starten
+              Zum Pläne-Überblick
             </Link>
             <a href="#features" className="btn-secondary w-full sm:w-auto">
               Features entdecken
@@ -44,19 +44,19 @@ export default function Hero() {
               <svg className="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>Keine Kreditkarte erforderlich</span>
+              <span>Gratis-Rechner ohne Anmeldung</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>DSGVO-konform</span>
+              <span>Rechner läuft im Browser</span>
             </div>
             <div className="flex items-center gap-2">
               <svg className="h-5 w-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
               </svg>
-              <span>SSL-verschlüsselt</span>
+              <span>HTTPS-Übertragung</span>
             </div>
           </div>
         </div>

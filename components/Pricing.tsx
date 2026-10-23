@@ -1,20 +1,19 @@
 'use client';
 
 import { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
 
 const plans = [
   {
     name: 'Basic',
     price: 19,
-    description: 'Für einfache Steuererklärungen',
+    description: 'Zur ersten Orientierung',
     features: [
-      'Form 1040-NR',
-      'FBAR (FinCEN 114)',
-      'E-Mail Support',
-      'Dokumenten-Upload (5 GB)',
+      'Physical-Presence-Rechner (330 Tage)',
+      'FEIE-vs.-FTC-Orientierung',
+      'FBAR-Checkliste',
+      'E-Mail-Support (Werktage)',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC || 'price_basic',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC || '',
     popular: false,
   },
   {
@@ -23,28 +22,23 @@ const plans = [
     description: 'Für die meisten Expats',
     features: [
       'Alles aus Basic',
-      'FEIE-Berechnung',
-      'Deadline-Tracking',
-      'Dokumenten-Upload (25 GB)',
-      'Priorisierter Support',
-      'Steuerberater-Check',
+      'Ergebnisbericht zum Herunterladen',
+      'Fristen-Übersicht',
+      'Dokumenten-Checkliste',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO || 'price_pro',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO || '',
     popular: true,
   },
   {
     name: 'Premium',
     price: 49,
-    description: 'Für komplexe Situationen',
+    description: 'Für mehrere Jahre',
     features: [
       'Alles aus Pro',
-      'Mehrere Steuerjahre',
-      'Persönlicher Steuerberater',
-      'Dokumenten-Upload (100 GB)',
-      '24/7 Support',
-      'Audit Protection',
+      'Berichte für mehrere Steuerjahre',
+      'Gesprächsleitfaden für dein Gespräch mit CPA/Steuerberater',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM || 'price_premium',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM || '',
     popular: false,
   },
 ];
@@ -171,7 +165,7 @@ export default function Pricing() {
 
               <button
                 onClick={() => handleCheckout(plan.priceId)}
-                disabled={loading === plan.priceId}
+                disabled={!plan.priceId || loading === plan.priceId}
                 className={`w-full py-3 px-6 rounded-lg font-semibold text-sm transition ${
                   plan.popular
                     ? 'bg-white text-primary-600 hover:bg-primary-50'
@@ -186,7 +180,8 @@ export default function Pricing() {
 
         <p className="text-center text-sm text-gray-500 mt-8">
           Alle Preise inkl. MwSt. Jederzeit kündbar. Testmodus — keine echten
-          Abbuchungen.
+          Abbuchungen. Widerrufsrecht siehe{' '}
+          <a href="/widerruf" className="underline">Widerrufsbelehrung</a>.
         </p>
       </div>
     </section>

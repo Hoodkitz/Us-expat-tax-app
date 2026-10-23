@@ -6,7 +6,7 @@ const faqs = [
   {
     question: 'Was ist die US Expat Tax App?',
     answer:
-      'Die US Expat Tax App ist eine Software, die US-Expats bei der Erstellung ihrer US-Steuererklärung unterstützt. Sie deckt Form 1040-NR, FBAR, FEIE und weitere wichtige Formulare ab.',
+      'Die US Expat Tax App bietet US-Expats Informationen und Hilfsmittel rund um US-Steuerthemen (z. B. FBAR, FEIE). Sie ist keine Steuerberatung und ersetzt keine Fachperson.',
   },
   {
     question: 'Wer muss eine US-Steuererklärung abgeben?',
@@ -21,12 +21,12 @@ const faqs = [
   {
     question: 'Was ist FEIE?',
     answer:
-      'Die Foreign Earned Income Exclusion (FEIE) erlaubt es US-Expats, bis zu $126.500 (2024) ihres ausländischen Einkommens von der US-Besteuerung auszunehmen. Voraussetzung ist der Physical Presence Test oder Bona Fide Residence Test.',
+      'Die Foreign Earned Income Exclusion (FEIE) erlaubt es US-Expats, bis zu einem jährlich angepassten Höchstbetrag (2026: $132.900) ihres ausländischen Einkommens von der US-Besteuerung auszunehmen. Voraussetzung ist der Physical Presence Test oder Bona Fide Residence Test.',
   },
   {
     question: 'Wie funktioniert der Dokumenten-Upload?',
     answer:
-      'Du kannst deine Steuerdokumente (W-2, 1099, Kontoauszüge etc.) sicher in die App hochladen. Die Daten werden verschlüsselt übertragen und gespeichert. Unser System extrahiert automatisch die relevanten Informationen.',
+      'Du kannst deine Steuerdokumente (W-2, 1099, Kontoauszüge etc.) sicher in die App hochladen. Die Übertragung erfolgt verschlüsselt per HTTPS.',
   },
   {
     question: 'Kann ich die App auch für vergangene Steuerjahre nutzen?',
@@ -36,12 +36,12 @@ const faqs = [
   {
     question: 'Wie sicher sind meine Daten?',
     answer:
-      'Wir nehmen Datenschutz sehr ernst. Alle Daten werden mit TLS 1.3 verschlüsselt übertragen und mit AES-256 verschlüsselt gespeichert. Unsere Server befinden sich in der EU und wir sind vollständig DSGVO-konform.',
+      'Die Übertragung erfolgt verschlüsselt per HTTPS. Zahlungsdaten verarbeitet Stripe; sie werden nicht auf unseren Servern gespeichert. Details zur Verarbeitung personenbezogener Daten findest du in der Datenschutzerklärung.',
   },
   {
     question: 'Kann ich jederzeit kündigen?',
     answer:
-      'Ja, du kannst jederzeit kündigen. Es gibt keine langfristigen Verträge oder Kündigungsfristen. Deine Daten bleiben 30 Tage nach Kündigung verfügbar, danach werden sie gelöscht.',
+      'Ja, du kannst jederzeit kündigen. Es gibt keine langfristigen Verträge oder Kündigungsfristen. Details zu Laufzeit und Widerruf stehen in den AGB und der Widerrufsbelehrung.',
   },
 ];
 
