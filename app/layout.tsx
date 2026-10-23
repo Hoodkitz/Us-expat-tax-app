@@ -7,12 +7,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'US Expat Tax App — Steuererklärung für US-Expats',
   description:
-    'Die einfachste Art, deine US-Steuererklärung als Expat zu machen. FBAR, FEIE, Form 1040-NR, Dokumenten-Upload und Deadline-Tracking in einer App.',
+    'Rechner, Berichte und Checklisten für US-Expats: FBAR, FEIE, Fristen. Keine Steuerberatung.',
   keywords: [
     'US Expat Tax',
     'FBAR',
     'FEIE',
-    'Form 1040-NR',
     'Steuererklärung',
     'US Expats',
     'Tax Filing',
