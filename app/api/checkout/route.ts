@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { allowedPriceIds } from '@/lib/prices';
 
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || '', {
   apiVersion: '2024-06-20',
@@ -10,11 +11,15 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { priceId } = body;
 
-    if (!priceId) {
+    if (typeof priceId !== 'string' || !priceId) {
       return NextResponse.json(
         { error: 'priceId is required' },
         { status: 400 }
       );
+    }
+
+    if (!allowedPriceIds().includes(priceId)) {
+      return NextResponse.json({ error: 'Invalid priceId' }, { status: 400 });
     }
 
     const session = await stripe.checkout.sessions.create({

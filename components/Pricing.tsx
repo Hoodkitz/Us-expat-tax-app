@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
 
 const plans = [
   {
@@ -14,7 +13,7 @@ const plans = [
       'E-Mail Support',
       'Dokumenten-Upload (5 GB)',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC || 'price_basic',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_BASIC || '',
     popular: false,
   },
   {
@@ -29,7 +28,7 @@ const plans = [
       'Priorisierter Support',
       'Steuerberater-Check',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO || 'price_pro',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PRO || '',
     popular: true,
   },
   {
@@ -44,7 +43,7 @@ const plans = [
       '24/7 Support',
       'Audit Protection',
     ],
-    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM || 'price_premium',
+    priceId: process.env.NEXT_PUBLIC_STRIPE_PRICE_PREMIUM || '',
     popular: false,
   },
 ];
@@ -171,7 +170,7 @@ export default function Pricing() {
 
               <button
                 onClick={() => handleCheckout(plan.priceId)}
-                disabled={loading === plan.priceId}
+                disabled={!plan.priceId || loading === plan.priceId}
                 className={`w-full py-3 px-6 rounded-lg font-semibold text-sm transition ${
                   plan.popular
                     ? 'bg-white text-primary-600 hover:bg-primary-50'
@@ -186,7 +185,8 @@ export default function Pricing() {
 
         <p className="text-center text-sm text-gray-500 mt-8">
           Alle Preise inkl. MwSt. Jederzeit kündbar. Testmodus — keine echten
-          Abbuchungen.
+          Abbuchungen. Widerrufsrecht siehe{' '}
+          <a href="/widerruf" className="underline">Widerrufsbelehrung</a>.
         </p>
       </div>
     </section>
