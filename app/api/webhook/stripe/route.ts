@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
+import { alreadyProcessed } from '@/lib/idempotency';
 
 export const runtime = 'nodejs';
 export const dynamic = 'force-dynamic';
@@ -28,11 +29,15 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid signature' }, { status: 400 });
   }
 
+  if (alreadyProcessed(event.id)) {
+    return NextResponse.json({ received: true, duplicate: true });
+  }
+
   switch (event.type) {
     case 'checkout.session.completed': {
       const session = event.data.object as Stripe.Checkout.Session;
-      // Minimal fulfillment record. TODO: persist to a database and make
-      // idempotent on event.id before granting access.
+      // Minimal fulfillment record. TODO: persist to a database (see lib/idempotency.ts
+      // for limits of the in-memory guard) before granting access.
       console.log(
         JSON.stringify({
           type: 'fulfillment',

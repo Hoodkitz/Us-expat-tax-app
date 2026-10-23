@@ -21,7 +21,7 @@ const faqs = [
   {
     question: 'Was ist FEIE?',
     answer:
-      'Die Foreign Earned Income Exclusion (FEIE) erlaubt es US-Expats, bis zu einem jährlich angepassten Höchstbetrag (2025: $130.000) ihres ausländischen Einkommens von der US-Besteuerung auszunehmen. Voraussetzung ist der Physical Presence Test oder Bona Fide Residence Test.',
+      'Die Foreign Earned Income Exclusion (FEIE) erlaubt es US-Expats, bis zu einem jährlich angepassten Höchstbetrag (2026: $132.900) ihres ausländischen Einkommens von der US-Besteuerung auszunehmen. Voraussetzung ist der Physical Presence Test oder Bona Fide Residence Test.',
   },
   {
     question: 'Wie funktioniert der Dokumenten-Upload?',

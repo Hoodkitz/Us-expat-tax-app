@@ -2,10 +2,14 @@
 // Simplified, informational only. Figures must be re-checked against IRS
 // sources every year (Rev. Proc. / Form 2555 instructions).
 
-// FEIE maximum exclusion by tax year. 2025 = 130,000 (IRS). Verify before adding years.
+// FEIE maximum exclusion by tax year. Verify against IRS before adding years.
+// Source (2025 and 2026):
+// https://www.irs.gov/individuals/international-taxpayers/figuring-the-foreign-earned-income-exclusion
+// (checked 2026-10-23: 2026 = $132,900, 2025 = $130,000)
 export const FEIE_LIMITS: Record<number, number> = {
   2024: 126500,
   2025: 130000,
+  2026: 132900,
 };
 
 export const PHYSICAL_PRESENCE_MIN_DAYS = 330;

@@ -10,7 +10,7 @@ const fmt = (n: number) =>
 
 export default function Rechner() {
   const [daysOut, setDaysOut] = useState(30);
-  const [year, setYear] = useState(2025);
+  const [year, setYear] = useState(2026);
   const [income, setIncome] = useState(80000);
   const [foreignTax, setForeignTax] = useState(20000);
   const [rate, setRate] = useState(22);
