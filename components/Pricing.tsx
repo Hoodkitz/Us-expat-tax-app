@@ -60,7 +60,7 @@ export default function Pricing() {
       const data = await response.json();
 
       if (data.url) {
-        window.location.href = data.url;
+        window.location.assign(data.url);
       } else {
         alert('Fehler beim Erstellen der Checkout-Session. Bitte versuche es erneut.');
       }
